@@ -1,4 +1,12 @@
-chef-papertrail
-===============
+Description
+===========
 
-Chef cookbook for configuring Papertrail logging
+Requirements
+============
+
+Attributes
+==========
+
+Usage
+=====
+

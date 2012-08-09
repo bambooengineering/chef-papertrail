@@ -1,0 +1,6 @@
+$DefaultNetstreamDriverCAFile /etc/papertrail/syslog.papertrail.crt # trust these CAs
+$DefaultNetstreamDriver gtls # use gtls netstream driver
+$ActionSendStreamDriverMode 1 # require TLS
+$ActionSendStreamDriverAuthMode x509/name # authenticate by hostname
+
+*.*                 @@<%= node[:papertrail][:host] %>:<%= node[:papertrail][:port] %>

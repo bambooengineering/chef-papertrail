@@ -1,0 +1,5 @@
+files: [<%= node[:papertrail][:logs].join(', ') %>]
+destination:
+  host: <%= node[:papertrail][:host] %>
+  port: <%= node[:papertrail][:port] %>
+ssl_server_cert: /etc/papertrail/syslog.papertrail.crt
