@@ -1,4 +1,6 @@
-site "http://community.opscode.com/api/v1"
+site :opscode
+
+metadata
 
 cookbook 'build-essential'
 cookbook 'rsyslog'

@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "papertrail": {
+      "path": "."
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "rsyslog": {
+      "locked_version": "1.8.0"
+    }
+  }
+}
