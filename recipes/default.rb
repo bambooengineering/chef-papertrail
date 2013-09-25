@@ -22,7 +22,7 @@ directory papertrail_conf_dir do
   action :create
   owner 'root'
   group 'root'
-  mode '0644'
+  mode '0755'
 end
 
 template "#{papertrail_conf_dir}/logs.yml" do
