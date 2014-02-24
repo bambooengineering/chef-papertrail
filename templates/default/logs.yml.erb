@@ -1,12 +1,12 @@
-files: [<%= node[:papertrail][:logs].join(', ') %>]
-destination:
-  host: <%= node[:papertrail][:host] %>
-  port: <%= node[:papertrail][:port] %>
-ssl_server_cert: /etc/papertrail/syslog.papertrail.crt
-<% if !node[:papertrail][:exclude_patterns].empty? %>
-exclude_patterns:
-<% node[:papertrail][:exclude_patterns].each do |p| %>
-  - <%= p %>
-<% end %>
-<% end %>
-
+<%=
+hash = {
+    files: node[:papertrail][:logs],
+    destination: {
+      host: node[:papertrail][:host],
+      port: node[:papertrail][:port]
+    },
+    ssl_server_cert: '/etc/papertrail/syslog.papertrail.crt',
+    exclude_patterns: node[:papertrail][:exclude_patterns]
+}
+hash.to_yaml
+%>
