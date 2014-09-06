@@ -42,10 +42,10 @@ template "/etc/rsyslog.d/papertrail.conf" do
   notifies :restart, 'service[rsyslog]'
 end
 
-remote_file "#{papertrail_conf_dir}/syslog.papertrail.crt" do
-  source 'https://papertrailapp.com/tools/syslog.papertrail.crt'
+remote_file "#{papertrail_conf_dir}/papertrail-bundle.pem" do
+  source 'https://papertrailapp.com/tools/papertrail-bundle.pem'
   mode '0644'
-  checksum '7d6bdd1c00343f6fe3b21db8ccc81e8cd1182c5039438485acac4d98f314fe10'
+  checksum 'c03a504397dc45b4fc05f978dbf02129793cbd2a0b64856c2ba1bb49a3b9aacb'
 end
 
 cookbook_file '/etc/init.d/remote_syslog' do

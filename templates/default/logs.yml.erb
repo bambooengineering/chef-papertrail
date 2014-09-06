@@ -5,7 +5,7 @@ hash = {
       'host' => node[:papertrail][:host],
       'port' => node[:papertrail][:port]
     },
-    'ssl_server_cert' => '/etc/papertrail/syslog.papertrail.crt',
+    'ssl_server_cert' => '/etc/papertrail/papertrail-bundle.pem',
     'exclude_patterns' => node[:papertrail][:exclude_patterns].map{|a| a} # Map out of ruby/array:Chef::Node::ImmutableArray
 }
 hash.to_yaml
